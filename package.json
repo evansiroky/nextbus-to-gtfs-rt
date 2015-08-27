@@ -1,0 +1,24 @@
+{
+  "name": "nextbus-to-gtfs-rt",
+  "version": "0.0.0",
+  "description": "A node.js server that converts the nextbus api to gtfs-rt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "transit",
+    "nextbus",
+    "gtfs",
+    "gtfs-rt"
+  ],
+  "author": "Evan Siroky",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "gtfs-realtime-bindings": "0.0.4",
+    "minimist": "^1.2.0",
+    "moment": "^2.10.6",
+    "transit-api": "https://github.com/djstroky/transit-api.git"
+  }
+}
