@@ -46,13 +46,14 @@ var updateTrips = function() {
       console.log(routes[i]);
     };
   });
-  curTripUpdates = {};
+  curTripUpdates = msg;
 }
 
 var updateAlerts = function() {
   var msg = makeMessageTemplate(),
     nextBusMessageIds = [];
   nextbus.messages().then(function(messages) {
+    messages = ensureArray(messages);
     for (var i = 0; i < messages.route.length; i++) {
       var routeMessages = ensureArray(messages.route[i].message);
 
@@ -109,7 +110,26 @@ var updateAlerts = function() {
 
 var updateVehicles = function() {
   var msg = makeMessageTemplate();
-  curVehiclePositions = {};
+  nextbus.vehicleLocations().then(function(data) {
+    var vehicles = ensureArray(data.vehicle);
+    for (var i = 0; i < vehicles.length; i++) {
+      curVehicle = vehicles[i];
+      msg.entity.push(new realtime.VehiclePosition({
+        position: new realtime.Position({
+          latitude: curVehicle.lat,
+          longitude: curVehicle.lon,
+          bearing: curVehicle.heading,
+          speed: parseFloat(curVehicle.speedKmHr) * 0.277778
+        }),
+        timestamp: moment().unix() - parseInt(curVehicle.secsSinceReport, 10),
+        vehicle: new realtime.VehicleDescriptor({
+          id: curVehicle.id
+        })
+      }));
+    };
+    curVehiclePositions = msg;
+    console.log(msg.entity);
+  });
 }
 
 var updateAll = function() {
@@ -119,5 +139,5 @@ var updateAll = function() {
 }
 
 //setInterval(updateAll, 30000);
-updateAlerts();
+updateVehicles();
 
