@@ -41,21 +41,72 @@ var ensureArray = function(obj) {
 
 var updateTrips = function() {
   var msg = makeMessageTemplate();
-  nextbus.routeList().then(function(routes) { 
-    for (var i = 0; i < routes.length; i++) {
-      console.log(routes[i]);
-    };
-  });
   curTripUpdates = msg;
+
+  var getMultiPredictions = function(routeStopPairs) {
+    console.log('getMultiPredictions');
+    // requests predictions for each route/stop combo
+    nextbus.predictionsForMultiStops(routeStopPairs).then(function(predictions) {
+      predictions = ensureArray(predictions);
+      for (var i = 0; i < predictions.length; i++) {
+        predictions[i]
+      };
+    });
+  }
+
+  var getRouteStops = function(routeTags) {
+    // requests list of all stops at each route
+    nextbus.routeConfig(routeTags).then(function(routeStops) {
+      routeStops = ensureArray(routeStops);
+      var predictionStopsToRequest = {},
+        curNumRouteStopPairs = 0;
+      for (var i = 0; i < routeStops.length; i++) {
+        var stops = ensureArray(routeStops[i].stop),
+          curRouteTag = routeStops[i].tag;
+        for (var j = 0; j < stops.length; j++) {
+          if(!predictionStopsToRequest[curRouteTag]) {
+            predictionStopsToRequest[curRouteTag] = []
+          }
+          predictionStopsToRequest[curRouteTag].push(stops[j].tag);
+          curNumRouteStopPairs++;
+          if(curNumRouteStopPairs == 150) {
+            getMultiPredictions(predictionStopsToRequest);
+            predictionStopsToRequest = {};
+            curNumRouteStopPairs = 0;
+          }
+        };
+      };
+      if(curNumRouteStopPairs > 0) {
+        getMultiPredictions(predictionStopsToRequest);
+      }
+    });
+  }
+
+  nextbus.routeList().then(function(routes) {
+    routes = ensureArray(routes);
+    var routesToRequest = [];
+    for (var i = 0; i < routes.length; i++) {
+      routesToRequest.push(routes[i].tag);
+      if(routesToRequest.length == 100) {
+        getRouteStops(routesToRequest);
+        routesToRequest = [];
+      }
+    }
+    if(routesToRequest.length > 0) {
+      getRouteStops(routesToRequest);
+    }
+  });
+  
 }
 
 var updateAlerts = function() {
   var msg = makeMessageTemplate(),
     nextBusMessageIds = [];
   nextbus.messages().then(function(messages) {
-    messages = ensureArray(messages);
-    for (var i = 0; i < messages.route.length; i++) {
-      var routeMessages = ensureArray(messages.route[i].message);
+    var messagesByRoute = ensureArray(messages.route);
+    console.log(messagesByRoute[4].message[0]);
+    for (var i = 0; i < messagesByRoute.length; i++) {
+      var routeMessages = ensureArray(messagesByRoute[i].message);
 
       for (var j = 0; j < routeMessages.length; j++) {
         curMsg = routeMessages[j];
@@ -139,5 +190,5 @@ var updateAll = function() {
 }
 
 //setInterval(updateAll, 30000);
-updateVehicles();
+updateAlerts();
 
