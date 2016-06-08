@@ -1,14 +1,21 @@
+var fs = require('fs')
+
 var moment = require('moment'),
   parseArgs = require('minimist'),
   realtime = require('gtfs-realtime-bindings'),
-  transit_api = require('transit-api');
+  transitApi = require('transit-api');
 
-// prepare GTFS-RT Protos
-var curTripUpdates, curServiceAlerts, curVehiclePositions;
+// parse args
+var args = parseArgs(process.argv.slice(2));
 
-// prepare NextBus api
-var args = parseArgs(process.argv.slice(2)),
-  nextbus = new transit_api.NextBus(args.a);
+if(!args.a) {
+  var err = new Error('No agency selected')
+  throw err;
+}
+
+// prepare nextbus api
+var nextbus = new transitApi.NextBus(args.a);
+  destFolder = (args.d ? args.d : process.cwd())
 
 var makeMessageTemplate = function() {
   return new realtime.FeedMessage({
@@ -39,18 +46,66 @@ var ensureArray = function(obj) {
   return obj;
 }
 
-var updateTrips = function() {
+var writeMsgToFile = function(filename, msg, callback) {
+  try {
+    var binaryData = msg.encode().toBuffer()
+  } catch(e) {
+    console.log(e)
+    return callback(e)
+  }
+  fs.writeFile(destFolder + '/' + filename, binaryData, function(err) {
+    console.log(err, filename, 'written')
+  });
+}
+
+var updateTrips = function(callback) {
   var msg = makeMessageTemplate();
   curTripUpdates = msg;
+
+  var tripUpdates = {}
 
   var getMultiPredictions = function(routeStopPairs) {
     console.log('getMultiPredictions');
     // requests predictions for each route/stop combo
     nextbus.predictionsForMultiStops(routeStopPairs).then(function(predictions) {
       predictions = ensureArray(predictions);
+      console.log(JSON.stringify(predictions, null, 2))
       for (var i = 0; i < predictions.length; i++) {
-        predictions[i]
-      };
+        var curPrediction = predictions[i],
+          directions = ensureArray(curPrediction.direction);
+        for (var j = 0; j < directions.length; j++ ) {
+          var directionPredictions = ensureArray(directions[j].prediction);
+          for (var k = 0; k < directionPredictions.length; k++) {
+            var tripPrediction = directionPredictions[k]
+            if(!tripUpdates[tripPrediction.tripTag]) {
+              var tripUpdate = new realtime.TripUpdate({
+                trip: new realtime.TripDescriptor({
+                  route_id: curPrediction.routeTag,
+                  trip_id: tripPrediction.tripTag
+                })
+              });
+              if(tripPrediction.vehicle) {
+                tripUpdate.vehicle = new realtime.VehicleDescriptor({
+                  id: tripPrediction.vehicle
+                })
+              }
+              tripUpdates[tripPrediction.tripTag] = tripMessage
+            }
+            var stopTimeUpdate = new realtime.StopTimeUpdate({
+              stop_id: curPrediction.stopTag
+            })
+            var stopTimeEvent = new realtime.StopTimeEvent({
+              time: getEpochTime(tripPrediction.epochTime)
+            })
+            if(tripPrediction.isDeparture === 'false') {
+              stopTimeUpdate.arrival = stopTimeEvent
+            } else {
+              stopTimeUpdate.departure = stopTimeEvent
+            }
+            tripUpdates[tripPrediction.tripTag].stop_time_update.push(stopTimeUpdate)
+          }
+        }
+      }
     });
   }
 
@@ -99,12 +154,12 @@ var updateTrips = function() {
   
 }
 
-var updateAlerts = function() {
+var updateAlerts = function(callback) {
   var msg = makeMessageTemplate(),
-    nextBusMessageIds = [];
+    nextBusMessageIds = {};
   nextbus.messages().then(function(messages) {
     var messagesByRoute = ensureArray(messages.route);
-    console.log(messagesByRoute[4].message[0]);
+    //console.log(messagesByRoute[4].message[0]);
     for (var i = 0; i < messagesByRoute.length; i++) {
       var routeMessages = ensureArray(messagesByRoute[i].message);
 
@@ -112,7 +167,7 @@ var updateAlerts = function() {
         curMsg = routeMessages[j];
 
         // check if message is already added elsewhere
-        if(nextBusMessageIds.indexOf(curMsg.id) == -1) {
+        if(!nextBusMessageIds[curMsg.id]) {
 
           // create alert message
           var alert = new realtime.Alert({
@@ -148,45 +203,50 @@ var updateAlerts = function() {
           }
 
           // add alert to overall feed message
-          msg.entity.push(alert);
+          msg.add('entity', new realtime.FeedEntity({
+            id: curMsg.id,
+            alert: alert
+          }));
 
           // mark message id as processed
-          nextBusMessageIds.push(curMsg.id);
+          nextBusMessageIds[curMsg.id] = true;
         }
       }
     }
-    curServiceAlerts = msg;
+    writeMsgToFile('alerts.proto', msg, callback)
   });
 }
 
-var updateVehicles = function() {
+var updateVehicles = function(callback) {
   var msg = makeMessageTemplate();
   nextbus.vehicleLocations().then(function(data) {
     var vehicles = ensureArray(data.vehicle);
     for (var i = 0; i < vehicles.length; i++) {
       curVehicle = vehicles[i];
-      msg.entity.push(new realtime.VehiclePosition({
-        position: new realtime.Position({
-          latitude: curVehicle.lat,
-          longitude: curVehicle.lon,
-          bearing: curVehicle.heading,
-          speed: parseFloat(curVehicle.speedKmHr) * 0.277778
-        }),
-        timestamp: moment().unix() - parseInt(curVehicle.secsSinceReport, 10),
-        vehicle: new realtime.VehicleDescriptor({
-          id: curVehicle.id
+      msg.add('entity', new realtime.FeedEntity({
+        id: 'Vehicle Position ' + i,
+        vehicle: new realtime.VehiclePosition({
+          position: new realtime.Position({
+            latitude: curVehicle.lat,
+            longitude: curVehicle.lon,
+            bearing: curVehicle.heading,
+            speed: curVehicle.speedKmHr ? parseFloat(curVehicle.speedKmHr) * 0.277778 : 0
+          }),
+          timestamp: moment().unix() - parseInt(curVehicle.secsSinceReport, 10),
+          vehicle: new realtime.VehicleDescriptor({
+            id: curVehicle.id
+          })
         })
       }));
     };
-    curVehiclePositions = msg;
-    console.log(msg.entity);
+    writeMsgToFile('vehicles.proto', msg, callback)
   });
 }
 
 var updateAll = function() {
-  updateTrips();
   updateAlerts();
   updateVehicles();
+  updateTrips();
 }
 
 //setInterval(updateAll, 30000);
