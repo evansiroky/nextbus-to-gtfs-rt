@@ -7,7 +7,7 @@ util.getTranslator = function() {
   var Translator = require('../lib/index.js')
 
   return new Translator({ 
-    nextbusAgencyId: 'test',
+    nextbusAgencyId: 'seattle-sc',
     debug: true
   })
 }

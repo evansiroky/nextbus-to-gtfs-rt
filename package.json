@@ -4,7 +4,8 @@
   "description": "A script that converts the nextbus api to gtfs-rt",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha \"test/**/*.js\""
+    "test": "mocha \"test/**/*.js\"",
+    "test-trips": "mocha test/tripUpdates.test.js"
   },
   "keywords": [
     "transit",
@@ -15,6 +16,7 @@
   "author": "Evan Siroky",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.0-rc.5",
     "gtfs-realtime-bindings": "0.0.4",
     "minimist": "^1.2.0",
     "moment": "^2.10.6",
