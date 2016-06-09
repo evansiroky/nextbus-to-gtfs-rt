@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<body copyright="Test Agency">
+<vehicle id="1234" routeTag="1234" dirTag="1234_0_var0" lat="35.59288" lon="-82.55589" secsSinceReport="21" predictable="true" heading="219" speedKmHr="27"/>
+<vehicle id="4321" routeTag="4321" dirTag="4321_0_var0" lat="35.59276" lon="-82.55569" secsSinceReport="11" predictable="true" heading="277" speedKmHr="12"/>
+<lastTime time="1465434051772"/>
+</body>

@@ -51,8 +51,12 @@ util.getEntityOfSpecificType = function(expectedType, entities, idx) {
 
 }
 
+util.getUInt64 = function(val) {
+  return val.toNumber()
+}
+
 util.assertUInt64 = function(protoBufInt, expectedInt) {
-  assert.equal(protoBufInt.toNumber(), expectedInt)
+  assert.equal(util.getUInt64(protoBufInt), expectedInt)
 }
 
 module.exports = util

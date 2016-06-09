@@ -14,11 +14,11 @@ var testTranslator = util.getTranslator()
 
 describe('service alerts', function() {
   
-  it('should dl nextbus messages and return alert protobuf file', function(done) {
+  it('should dl nextbus messages and return service alert protobuf', function(done) {
     
     var nockScope = nock(NOCK_HOST)
       .get(BASE_URL_PATH + '?t=0&a=test&command=messages')
-      .replyWithFile(200, FIXTURES_FOLDER + '/simple-alert.xml')
+      .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
 
     testTranslator.processServiceAlerts(function(err, feedMessage) {
 
