@@ -2,12 +2,12 @@
 <body copyright="Test Agency">
   <route tag="all">
   </route>
-  <route tag="1234">
+  <route tag="FHS">
     <message id="1234" startBoundary="1465380000000" startBoundaryStr="Wed, Jun 08 06:00:00 EDT 2016" endBoundary="1465599600000" endBoundaryStr="Fri, Jun 10 19:00:00 EDT 2016" sendToBuses="false" priority="High">
-      <routeConfiguredForMessage tag="1234">        
-        <stop tag="123456" title="Main Street and 1st" />
+      <routeConfiguredForMessage tag="FHS">        
+        <stop tag="1672" title="S Jackson St &amp; 12th Ave S" />
       </routeConfiguredForMessage>
-      <text>Stop closed due to construction.</text>
+      <text>Construction activities nearby may cause intermitent closures.</text>
     </message>
   </route>
 </body>

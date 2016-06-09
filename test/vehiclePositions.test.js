@@ -18,8 +18,8 @@ describe('vehicle positions', function() {
   it('should dl nextbus vehicle locations and return vehicle positions protobuf', function(done) {
     
     var nockScope = nock(NOCK_HOST)
-      .get(BASE_URL_PATH + '?r=&t=0&a=test&command=vehicleLocations')
-      .replyWithFile(200, FIXTURES_FOLDER + '/vehicle-locations.xml')
+      .get(BASE_URL_PATH + '?r=&t=0&a=seattle-sc&command=vehicleLocations')
+      .replyWithFile(200, FIXTURES_FOLDER + '/vehicleLocations.xml')
 
     testTranslator.processVehiclePositions(function(err, feedMessage) {
 

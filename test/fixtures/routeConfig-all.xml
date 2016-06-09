@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<body copyright="All data copyright Seattle Streetcar 2016.">
+<route tag="FHS" title="Strc FHS" color="992ac5" oppositeColor="ffffff" latMin="47.5991199" latMax="47.6181599" lonMin="-122.33328" lonMax="-122.31404">
+<stop tag="1552" title="S Jackson St &amp; Occidental Ave S" lat="47.5991399" lon="-122.33326" stopId="1552"/>
+<stop tag="1652" title="S Jackson St &amp; 5th Ave S" lat="47.5991199" lon="-122.32729" stopId="1652"/>
+<stop tag="1662" title="S Jackson St &amp; 8th Ave S" lat="47.5991199" lon="-122.32339" stopId="1662"/>
+<stop tag="1672" title="S Jackson St &amp; 12th Ave S" lat="47.5991299" lon="-122.31553" stopId="1672"/>
+<stop tag="1682" title="14th Ave S &amp; S Washington St" lat="47.6005899" lon="-122.31404" stopId="1682"/>
+<stop tag="27420" title="E Yesler Way &amp; Broadway" lat="47.6017699" lon="-122.32062" stopId="27420"/>
+<stop tag="41904" title="Broadway &amp; E Terrace St" lat="47.6054499" lon="-122.32065" stopId="41904"/>
+<stop tag="41908" title="Broadway &amp; E Marion St" lat="47.6101599" lon="-122.32066" stopId="41908"/>
+<stop tag="41970" title="Broadway &amp; E Pine St" lat="47.6151699" lon="-122.3207" stopId="41970"/>
+<stop tag="11175_ar" title="Broadway &amp; E Howell St" lat="47.6181599" lon="-122.32075"/>
+<stop tag="11062" title="Broadway &amp; E Denny Way" lat="47.6181599" lon="-122.32095" stopId="11062"/>
+<stop tag="41980" title="Broadway &amp; E Pike St" lat="47.6141399" lon="-122.32088" stopId="41980"/>
+<stop tag="41986" title="Broadway &amp; Marion St" lat="47.6099099" lon="-122.32087" stopId="41986"/>
+<stop tag="41988" title="Broadway &amp; Terrace St" lat="47.6046399" lon="-122.32085" stopId="41988"/>
+<stop tag="27500" title="E Yesler Way &amp; Broadway" lat="47.6016299" lon="-122.32008" stopId="27500"/>
+<stop tag="1681" title="14th Ave S &amp; S Washington St" lat="47.6005699" lon="-122.31424" stopId="1681"/>
+<stop tag="1671" title="S Jackson St &amp; 12th Ave S" lat="47.5992699" lon="-122.31554" stopId="1671"/>
+<stop tag="1661" title="S Jackson St &amp; 8th Ave S" lat="47.5992599" lon="-122.32334" stopId="1661"/>
+<stop tag="1651" title="S Jackson St &amp; 5th Ave S" lat="47.5992599" lon="-122.32726" stopId="1651"/>
+<stop tag="1551_ar" title="S Jackson St &amp; Occidental Ave Walk" lat="47.5992699" lon="-122.33328"/>
+<direction tag="FHS_1_var0" title="PIONEER SQUARE VIA S JACKSON ST" name="PIONEER SQUARE VIA S JACKSON ST" useForUI="true">
+  <stop tag="11062" />
+  <stop tag="41980" />
+  <stop tag="41986" />
+  <stop tag="41988" />
+  <stop tag="27500" />
+  <stop tag="1681" />
+  <stop tag="1671" />
+  <stop tag="1661" />
+  <stop tag="1651" />
+  <stop tag="1551_ar" />
+</direction>
+<direction tag="FHS_0_var0" title="CAPITOL HILL VIA BROADWAY" name="CAPITOL HILL VIA BROADWAY" useForUI="true">
+  <stop tag="1552" />
+  <stop tag="1652" />
+  <stop tag="1662" />
+  <stop tag="1672" />
+  <stop tag="1682" />
+  <stop tag="27420" />
+  <stop tag="41904" />
+  <stop tag="41908" />
+  <stop tag="41970" />
+  <stop tag="11175_ar" />
+</direction>
+<path>
+<point lat="47.59914" lon="-122.33326"/>
+<point lat="47.59912" lon="-122.32729"/>
+</path>
+<path>
+<point lat="47.61816" lon="-122.32095"/>
+<point lat="47.61414" lon="-122.32088"/>
+</path>
+<path>
+<point lat="47.60545" lon="-122.32065"/>
+<point lat="47.61016" lon="-122.32066"/>
+</path>
+<path>
+<point lat="47.59926" lon="-122.32334"/>
+<point lat="47.59926" lon="-122.32726"/>
+</path>
+<path>
+<point lat="47.60057" lon="-122.31424"/>
+<point lat="47.59929" lon="-122.31413"/>
+<point lat="47.59927" lon="-122.31554"/>
+</path>
+<path>
+<point lat="47.61016" lon="-122.32066"/>
+<point lat="47.61517" lon="-122.3207"/>
+</path>
+<path>
+<point lat="47.6005899" lon="-122.31404"/>
+<point lat="47.6016199" lon="-122.31412"/>
+<point lat="47.60169" lon="-122.31493"/>
+<point lat="47.6017" lon="-122.32062"/>
+<point lat="47.60177" lon="-122.32062"/>
+</path>
+<path>
+<point lat="47.61517" lon="-122.3207"/>
+<point lat="47.61816" lon="-122.32075"/>
+</path>
+<path>
+<point lat="47.59912" lon="-122.32729"/>
+<point lat="47.59912" lon="-122.32339"/>
+</path>
+<path>
+<point lat="47.60991" lon="-122.32087"/>
+<point lat="47.60464" lon="-122.32085"/>
+</path>
+<path>
+<point lat="47.61414" lon="-122.32088"/>
+<point lat="47.60991" lon="-122.32087"/>
+</path>
+<path>
+<point lat="47.59913" lon="-122.31553"/>
+<point lat="47.59921" lon="-122.31424"/>
+<point lat="47.6005899" lon="-122.31404"/>
+</path>
+<path>
+<point lat="47.59912" lon="-122.32339"/>
+<point lat="47.59913" lon="-122.31553"/>
+</path>
+<path>
+<point lat="47.60464" lon="-122.32085"/>
+<point lat="47.60176" lon="-122.32075"/>
+<point lat="47.6017" lon="-122.32008"/>
+<point lat="47.60163" lon="-122.32008"/>
+</path>
+<path>
+<point lat="47.60163" lon="-122.32008"/>
+<point lat="47.60169" lon="-122.31416"/>
+<point lat="47.60085" lon="-122.31413"/>
+<point lat="47.60057" lon="-122.31424"/>
+</path>
+<path>
+<point lat="47.60177" lon="-122.32062"/>
+<point lat="47.60269" lon="-122.32075"/>
+<point lat="47.60545" lon="-122.32065"/>
+</path>
+<path>
+<point lat="47.59927" lon="-122.31554"/>
+<point lat="47.59926" lon="-122.32334"/>
+</path>
+<path>
+<point lat="47.59926" lon="-122.32726"/>
+<point lat="47.59927" lon="-122.33328"/>
+</path>
+</route>
+<route tag="SLU" title="Stcr SLU" color="992ac5" oppositeColor="ffffff" latMin="47.6132799" latMax="47.6276699" lonMin="-122.33857" lonMax="-122.33221">
+<stop tag="26680" title="Westlake Ave &amp; Olive Way" lat="47.6132899" lon="-122.33734" stopId="26680"/>
+<stop tag="26689" title="Westlake Ave &amp; 7th Ave" lat="47.6156199" lon="-122.33781" stopId="26689"/>
+<stop tag="26690" title="Westlake Ave &amp; 9th Ave" lat="47.6182699" lon="-122.33834" stopId="26690"/>
+<stop tag="26693" title="Terry Ave N &amp; Thomas St" lat="47.6214999" lon="-122.33705" stopId="26693"/>
+<stop tag="26698" title="Terry Ave N &amp; Republican St" lat="47.6234199" lon="-122.33704" stopId="26698"/>
+<stop tag="26701" title="South Lake Union Streetcar &amp; Terry Ave N" lat="47.6258299" lon="-122.33637" stopId="26701"/>
+<stop tag="26705_ar" title="Fairview Ave N &amp; Aloha St" lat="47.6275899" lon="-122.33221"/>
+<stop tag="26693_ar" title="Terry Ave N &amp; Thomas St" lat="47.6214999" lon="-122.33705"/>
+<stop tag="26700" title="Fairview Ave N &amp; Ward St" lat="47.6276699" lon="-122.33237" stopId="26700"/>
+<stop tag="26702" title="South Lake Union Streetcar &amp; Terry Ave N" lat="47.6259699" lon="-122.33653" stopId="26702"/>
+<stop tag="26641" title="Westlake Ave N &amp; Mercer St" lat="47.6243499" lon="-122.33855" stopId="26641"/>
+<stop tag="26645" title="Westlake Ave N &amp; Harrison St" lat="47.6213799" lon="-122.33857" stopId="26645"/>
+<stop tag="26665" title="Westlake Ave &amp; 9th Ave" lat="47.6177899" lon="-122.33846" stopId="26665"/>
+<stop tag="1619" title="Westlake Ave &amp; Virginia St" lat="47.6148599" lon="-122.33786" stopId="1619"/>
+<stop tag="1630_ar" title="Westlake Ave &amp; Olive Way" lat="47.6132799" lon="-122.33755"/>
+<direction tag="SLU_1_var0" title="DOWNTOWN SEATTLE PACIFIC PLACE STATION" name="DOWNTOWN SEATTLE PACIFIC PLACE STATION" useForUI="true">
+  <stop tag="26700" />
+  <stop tag="26702" />
+  <stop tag="26641" />
+  <stop tag="26645" />
+  <stop tag="26665" />
+  <stop tag="1619" />
+  <stop tag="1630_ar" />
+</direction>
+<direction tag="SLU_0_var0" title="LAKE UNION FRED HUTCHISON CANCER CENTER" name="LAKE UNION FRED HUTCHISON CANCER CENTER" useForUI="true">
+  <stop tag="26680" />
+  <stop tag="26689" />
+  <stop tag="26690" />
+  <stop tag="26693" />
+  <stop tag="26698" />
+  <stop tag="26701" />
+  <stop tag="26705_ar" />
+</direction>
+<path>
+<point lat="47.62342" lon="-122.33704"/>
+<point lat="47.62572" lon="-122.33712"/>
+<point lat="47.62589" lon="-122.33677"/>
+<point lat="47.62583" lon="-122.33637"/>
+</path>
+<path>
+<point lat="47.61329" lon="-122.33734"/>
+<point lat="47.61562" lon="-122.33781"/>
+</path>
+<path>
+<point lat="47.61779" lon="-122.33846"/>
+<point lat="47.61486" lon="-122.33786"/>
+</path>
+<path>
+<point lat="47.62138" lon="-122.33857"/>
+<point lat="47.61853" lon="-122.33849"/>
+<point lat="47.61779" lon="-122.33846"/>
+</path>
+<path>
+<point lat="47.62597" lon="-122.33653"/>
+<point lat="47.62592" lon="-122.33823"/>
+<point lat="47.6258" lon="-122.33855"/>
+<point lat="47.62547" lon="-122.33848"/>
+<point lat="47.62435" lon="-122.33855"/>
+</path>
+<path>
+<point lat="47.62583" lon="-122.33637"/>
+<point lat="47.62589" lon="-122.33484"/>
+<point lat="47.6259299" lon="-122.33447"/>
+<point lat="47.62864" lon="-122.33102"/>
+<point lat="47.62759" lon="-122.33221"/>
+</path>
+<path>
+<point lat="47.62767" lon="-122.33237"/>
+<point lat="47.62603" lon="-122.3343"/>
+<point lat="47.62589" lon="-122.33468"/>
+<point lat="47.62597" lon="-122.33653"/>
+</path>
+<path>
+<point lat="47.61827" lon="-122.33834"/>
+<point lat="47.61853" lon="-122.33849"/>
+<point lat="47.62088" lon="-122.33846"/>
+<point lat="47.6208699" lon="-122.33782"/>
+<point lat="47.6208699" lon="-122.33717"/>
+<point lat="47.6215" lon="-122.33705"/>
+</path>
+<path>
+<point lat="47.6215" lon="-122.33705"/>
+<point lat="47.62342" lon="-122.33704"/>
+</path>
+<path>
+<point lat="47.61562" lon="-122.33781"/>
+<point lat="47.61827" lon="-122.33834"/>
+</path>
+<path>
+<point lat="47.61486" lon="-122.33786"/>
+<point lat="47.61328" lon="-122.33755"/>
+</path>
+<path>
+<point lat="47.62435" lon="-122.33855"/>
+<point lat="47.62138" lon="-122.33857"/>
+</path>
+</route>
+</body>

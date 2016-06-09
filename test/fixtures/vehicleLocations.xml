@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<body copyright="All data copyright Seattle Streetcar 2016.">
+<vehicle id="303" routeTag="SLU" dirTag="SLU_0_var0" lat="47.62073" lon="-122.33842" secsSinceReport="24" predictable="true" heading="0" speedKmHr="7"/>
+<vehicle id="401" routeTag="FHS" dirTag="FHS_1_var0" lat="47.605494" lon="-122.320723" secsSinceReport="23" predictable="true" heading="182" speedKmHr="20"/>
+<vehicle id="407" routeTag="SLU" dirTag="SLU_0_var0" lat="47.613259" lon="-122.337513" secsSinceReport="5" predictable="true" heading="126"/>
+<vehicle id="404" routeTag="FHS" dirTag="FHS_0_var0" lat="47.599205" lon="-122.325349" secsSinceReport="9" predictable="true" heading="88" speedKmHr="28"/>
+<vehicle id="302" routeTag="SLU" dirTag="SLU_1_var0" lat="47.617749" lon="-122.33841" secsSinceReport="54" predictable="true" heading="166" speedKmHr="9"/>
+<vehicle id="402" routeTag="FHS" dirTag="FHS_0_var0" lat="47.601722" lon="-122.316725" secsSinceReport="43" predictable="true" heading="276" speedKmHr="24"/>
+<vehicle id="405" routeTag="FHS" dirTag="FHS_0_var0" lat="47.5992559" lon="-122.333378" secsSinceReport="31" predictable="true" heading="256"/>
+<vehicle id="403" routeTag="FHS" dirTag="FHS_1_var0" lat="47.617982" lon="-122.320972" secsSinceReport="3" predictable="true" heading="250"/>
+<lastTime time="1465511205772"/>
+</body>

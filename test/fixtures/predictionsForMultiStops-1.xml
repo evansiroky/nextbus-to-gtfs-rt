@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<body copyright="All data copyright Seattle Streetcar 2016.">
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; Olive Way" stopTag="1630_ar">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465511408186" seconds="210" minutes="3" isDeparture="false" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981690" />
+  <prediction epochTime="1465512419223" seconds="1221" minutes="20" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512659477" seconds="1461" minutes="24" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512927861" seconds="1730" minutes="28" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465514047474" seconds="2849" minutes="47" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Pike St" stopTag="41980">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511396709" seconds="199" minutes="3" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512116709" seconds="919" minutes="15" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465512836709" seconds="1639" minutes="27" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465513566659" seconds="2369" minutes="39" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  <prediction epochTime="1465514286659" seconds="3089" minutes="51" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982254" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; Terrace St" stopTag="41988">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511220992" seconds="23" minutes="0" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465511767957" seconds="570" minutes="9" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512487957" seconds="1290" minutes="21" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513207594" seconds="2010" minutes="33" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465513931187" seconds="2733" minutes="45" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; Marion St" stopTag="41986">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511538938" seconds="341" minutes="5" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512258938" seconds="1061" minutes="17" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465512978938" seconds="1781" minutes="29" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465513712508" seconds="2514" minutes="41" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  <prediction epochTime="1465514432508" seconds="3234" minutes="53" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982254" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 5th Ave S" stopTag="1651">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511895717" seconds="698" minutes="11" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465512442682" seconds="1245" minutes="20" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465513162682" seconds="1965" minutes="32" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513889919" seconds="2692" minutes="44" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514613512" seconds="3415" minutes="56" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="14th Ave S &amp; S Washington St" stopTag="1682">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511556967" seconds="359" minutes="5" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512159195" seconds="961" minutes="16" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465512879195" seconds="1681" minutes="28" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513583537" seconds="2386" minutes="39" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  <prediction epochTime="1465514312636" seconds="3115" minutes="51" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982192" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="E Yesler Way &amp; Broadway" stopTag="27420">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511280411" seconds="82" minutes="1" isDeparture="false" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982187" />
+  <prediction epochTime="1465511780156" seconds="582" minutes="9" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512382384" seconds="1184" minutes="19" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465513102384" seconds="1904" minutes="31" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513824906" seconds="2627" minutes="43" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 5th Ave S" stopTag="1652">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511770348" seconds="572" minutes="9" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465512490348" seconds="1292" minutes="21" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513211130" seconds="2013" minutes="33" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  <prediction epochTime="1465513940229" seconds="2742" minutes="45" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982192" />
+  <prediction epochTime="1465514660229" seconds="3462" minutes="57" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982193" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="14th Ave S &amp; S Washington St" stopTag="1681">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511485270" seconds="287" minutes="4" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465512032235" seconds="834" minutes="13" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512752235" seconds="1554" minutes="25" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513479412" seconds="2281" minutes="38" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514203005" seconds="3005" minutes="50" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="E Yesler Way &amp; Broadway" stopTag="27500">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511332311" seconds="134" minutes="2" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465511879276" seconds="681" minutes="11" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512599276" seconds="1401" minutes="23" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513324803" seconds="2127" minutes="35" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514048396" seconds="2850" minutes="47" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 8th Ave S" stopTag="1662">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511277429" seconds="79" minutes="1" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465511879657" seconds="682" minutes="11" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465512599657" seconds="1402" minutes="23" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513310909" seconds="2113" minutes="35" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  <prediction epochTime="1465514040008" seconds="2842" minutes="47" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982192" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; 9th Ave" stopTag="26690">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511364159" seconds="166" minutes="2" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465511632543" seconds="435" minutes="7" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512643580" seconds="1446" minutes="24" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465512883834" seconds="1686" minutes="28" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  <prediction epochTime="1465513152218" seconds="1954" minutes="32" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981587" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 8th Ave S" stopTag="1661">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511758828" seconds="561" minutes="9" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465512305793" seconds="1108" minutes="18" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465513025793" seconds="1828" minutes="30" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513756850" seconds="2559" minutes="42" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514480443" seconds="3282" minutes="54" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Terry Ave N &amp; Thomas St" stopTag="26693">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511260814" seconds="63" minutes="1" isDeparture="false" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981682" />
+  <prediction epochTime="1465511501068" seconds="303" minutes="5" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465511769452" seconds="571" minutes="9" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512780489" seconds="1582" minutes="26" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465513020743" seconds="1823" minutes="30" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; Occidental Ave Walk" stopTag="1551_ar">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465512075156" seconds="877" minutes="14" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465512622121" seconds="1424" minutes="23" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465513346257" seconds="2148" minutes="35" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465514074528" seconds="2877" minutes="47" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514798121" seconds="3600" minutes="60" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Terry Ave N &amp; Thomas St" stopTag="26693_ar" dirTitleBecauseNoPredictions="LAKE UNION FRED HUTCHISON CANCER CENTER">
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Terry Ave N &amp; Republican St" stopTag="26698">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511317983" seconds="120" minutes="2" isDeparture="false" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981682" />
+  <prediction epochTime="1465511558237" seconds="360" minutes="6" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465511826621" seconds="629" minutes="10" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512837658" seconds="1640" minutes="27" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465513077912" seconds="1880" minutes="31" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Howell St" stopTag="11175_ar">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511866627" seconds="669" minutes="11" isDeparture="false" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982187" />
+  <prediction epochTime="1465512366372" seconds="1168" minutes="19" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512968600" seconds="1771" minutes="29" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465513680484" seconds="2482" minutes="41" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465514402312" seconds="3204" minutes="53" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Denny Way" stopTag="11062">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511280000" seconds="82" minutes="1" isDeparture="true" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512000000" seconds="802" minutes="13" isDeparture="true" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465512720000" seconds="1522" minutes="25" isDeparture="true" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465513440000" seconds="2242" minutes="37" isDeparture="true" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  <prediction epochTime="1465514160000" seconds="2962" minutes="49" isDeparture="true" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982254" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; 7th Ave" stopTag="26689">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511240680" seconds="43" minutes="0" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465511509064" seconds="311" minutes="5" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512520101" seconds="1322" minutes="22" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465512760355" seconds="1562" minutes="26" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  <prediction epochTime="1465513028739" seconds="1831" minutes="30" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981587" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Pine St" stopTag="41970">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511784048" seconds="586" minutes="9" isDeparture="false" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982187" />
+  <prediction epochTime="1465512283793" seconds="1086" minutes="18" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512886021" seconds="1688" minutes="28" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465513609225" seconds="2411" minutes="40" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465514331053" seconds="3133" minutes="52" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave N &amp; Mercer St" stopTag="26641">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465511950077" seconds="752" minutes="12" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512190331" seconds="992" minutes="16" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512458715" seconds="1261" minutes="21" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513556418" seconds="2358" minutes="39" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  <prediction epochTime="1465513807619" seconds="2610" minutes="43" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981609" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; Virginia St" stopTag="1619">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465511306077" seconds="108" minutes="1" isDeparture="false" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981690" />
+  <prediction epochTime="1465512317114" seconds="1119" minutes="18" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512557368" seconds="1359" minutes="22" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512825752" seconds="1628" minutes="27" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513928865" seconds="2731" minutes="45" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 12th Ave S" stopTag="1671">
+  <direction title="PIONEER SQUARE VIA S JACKSON ST">
+  <prediction epochTime="1465511599059" seconds="401" minutes="6" isDeparture="false" dirTag="FHS_1_var0" vehicle="401" block="4127193" tripTag="30982249" />
+  <prediction epochTime="1465512146024" seconds="948" minutes="15" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="403" block="4127188" tripTag="30982250" />
+  <prediction epochTime="1465512866024" seconds="1668" minutes="27" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="402" block="4127191" tripTag="30982251" />
+  <prediction epochTime="1465513598991" seconds="2401" minutes="40" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="404" block="4127190" tripTag="30982252" />
+  <prediction epochTime="1465514322584" seconds="3125" minutes="52" isDeparture="false" affectedByLayover="true" dirTag="FHS_1_var0" vehicle="405" block="4127189" tripTag="30982253" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; Olive Way" stopTag="26680">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511408965" seconds="211" minutes="3" isDeparture="true" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512420002" seconds="1222" minutes="20" isDeparture="true" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465512660256" seconds="1462" minutes="24" isDeparture="true" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  <prediction epochTime="1465512928640" seconds="1731" minutes="28" isDeparture="true" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981587" />
+  <prediction epochTime="1465514048313" seconds="2850" minutes="47" isDeparture="true" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981588" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; 12th Ave S" stopTag="1672">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511428608" seconds="231" minutes="3" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512030836" seconds="833" minutes="13" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465512750836" seconds="1553" minutes="25" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513456208" seconds="2258" minutes="37" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  <prediction epochTime="1465514185307" seconds="2987" minutes="49" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982192" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Fairview Ave N &amp; Aloha St" stopTag="26705_ar">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511722410" seconds="524" minutes="8" isDeparture="false" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981682" />
+  <prediction epochTime="1465511962664" seconds="765" minutes="12" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465512231048" seconds="1033" minutes="17" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465513245491" seconds="2047" minutes="34" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465513496692" seconds="2299" minutes="38" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Terrace St" stopTag="41904">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511433820" seconds="236" minutes="3" isDeparture="false" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982187" />
+  <prediction epochTime="1465511933565" seconds="736" minutes="12" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512535793" seconds="1338" minutes="22" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465513254507" seconds="2056" minutes="34" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513976335" seconds="2778" minutes="46" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave &amp; 9th Ave" stopTag="26665">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465512160145" seconds="962" minutes="16" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512400399" seconds="1202" minutes="20" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512668783" seconds="1471" minutes="24" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513779076" seconds="2581" minutes="43" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  <prediction epochTime="1465514030277" seconds="2832" minutes="47" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981609" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Westlake Ave N &amp; Harrison St" stopTag="26645">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465512044546" seconds="847" minutes="14" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512284800" seconds="1087" minutes="18" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512553184" seconds="1355" minutes="22" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513663077" seconds="2465" minutes="41" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  <prediction epochTime="1465513914278" seconds="2716" minutes="45" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981609" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="South Lake Union Streetcar &amp; Terry Ave N" stopTag="26702">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465511824328" seconds="626" minutes="10" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465512064582" seconds="867" minutes="14" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512332966" seconds="1135" minutes="18" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513409629" seconds="2212" minutes="36" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  <prediction epochTime="1465513660830" seconds="2463" minutes="41" isDeparture="false" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981609" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="S Jackson St &amp; Occidental Ave S" stopTag="1552">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511640000" seconds="442" minutes="7" isDeparture="true" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465512360000" seconds="1162" minutes="19" isDeparture="true" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465513080000" seconds="1882" minutes="31" isDeparture="true" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  <prediction epochTime="1465513800000" seconds="2602" minutes="43" isDeparture="true" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982192" />
+  <prediction epochTime="1465514520000" seconds="3322" minutes="55" isDeparture="true" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982193" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Strc FHS" routeTag="FHS" stopTitle="Broadway &amp; E Marion St" stopTag="41908">
+  <direction title="CAPITOL HILL VIA BROADWAY">
+  <prediction epochTime="1465511607299" seconds="409" minutes="6" isDeparture="false" dirTag="FHS_0_var0" vehicle="402" block="4127191" tripTag="30982187" />
+  <prediction epochTime="1465512107044" seconds="909" minutes="15" isDeparture="false" dirTag="FHS_0_var0" vehicle="404" block="4127190" tripTag="30982188" />
+  <prediction epochTime="1465512709272" seconds="1511" minutes="25" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="405" block="4127189" tripTag="30982189" />
+  <prediction epochTime="1465513433176" seconds="2235" minutes="37" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="401" block="4127193" tripTag="30982190" />
+  <prediction epochTime="1465514155004" seconds="2957" minutes="49" isDeparture="false" affectedByLayover="true" dirTag="FHS_0_var0" vehicle="403" block="4127188" tripTag="30982191" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="Fairview Ave N &amp; Ward St" stopTag="26700">
+  <direction title="DOWNTOWN SEATTLE PACIFIC PLACE STATION">
+  <prediction epochTime="1465511722819" seconds="525" minutes="8" isDeparture="true" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981686" />
+  <prediction epochTime="1465511963073" seconds="765" minutes="12" isDeparture="true" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981665" />
+  <prediction epochTime="1465512231457" seconds="1033" minutes="17" isDeparture="true" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="302" block="4141802" tripTag="30981687" />
+  <prediction epochTime="1465513245920" seconds="2048" minutes="34" isDeparture="true" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="303" block="4141801" tripTag="30981688" />
+  <prediction epochTime="1465513497121" seconds="2299" minutes="38" isDeparture="true" affectedByLayover="true" dirTag="SLU_1_var0" vehicle="407" block="4141803" tripTag="30981609" />
+  </direction>
+</predictions>
+<predictions agencyTitle="Seattle Streetcar" routeTitle="Stcr SLU" routeTag="SLU" stopTitle="South Lake Union Streetcar &amp; Terry Ave N" stopTag="26701">
+  <direction title="LAKE UNION FRED HUTCHISON CANCER CENTER">
+  <prediction epochTime="1465511472311" seconds="274" minutes="4" isDeparture="false" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981682" />
+  <prediction epochTime="1465511712565" seconds="515" minutes="8" isDeparture="false" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981586" />
+  <prediction epochTime="1465511980949" seconds="783" minutes="13" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="302" block="4141802" tripTag="30981689" />
+  <prediction epochTime="1465512991986" seconds="1794" minutes="29" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="303" block="4141801" tripTag="30981683" />
+  <prediction epochTime="1465513236083" seconds="2038" minutes="33" isDeparture="false" affectedByLayover="true" dirTag="SLU_0_var0" vehicle="407" block="4141803" tripTag="30981550" />
+  </direction>
+</predictions>
+</body>

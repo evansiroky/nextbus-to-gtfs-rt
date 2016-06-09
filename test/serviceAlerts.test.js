@@ -17,7 +17,7 @@ describe('service alerts', function() {
   it('should dl nextbus messages and return service alert protobuf', function(done) {
     
     var nockScope = nock(NOCK_HOST)
-      .get(BASE_URL_PATH + '?t=0&a=test&command=messages')
+      .get(BASE_URL_PATH + '?t=0&a=seattle-sc&command=messages')
       .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
 
     testTranslator.processServiceAlerts(function(err, feedMessage) {
