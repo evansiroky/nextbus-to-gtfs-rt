@@ -5,7 +5,10 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "mocha \"test/**/*.js\"",
-    "test-trips": "mocha test/tripUpdates.test.js"
+    "precover": "rimraf coverage",
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- test/**/*.js",
+    "codeclimate-send": "cross-env CODECLIMATE_REPO_TOKEN=6d7eeb23555fb0892744f730d2fea3479cb513dc5a27cf3cdfeca9567cadff4a ./node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info",
+    "codeclimate": "npm run cover && npm run codeclimate-send"
   },
   "keywords": [
     "transit",
@@ -24,6 +27,9 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.2",
+    "cross-env": "^1.0.8",
+    "istanbul": "^0.4.3",
     "mocha": "^2.5.3",
     "nock": "^8.0.0",
     "rimraf": "^2.5.2"
