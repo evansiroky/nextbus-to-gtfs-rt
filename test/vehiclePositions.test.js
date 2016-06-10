@@ -29,21 +29,24 @@ describe('vehicle positions', function() {
       
         assert.isNotOk(err)
 
-        var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 2),
-          vehicle = util.getEntityOfSpecificType('vehicle', entities, 0)
+        var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 8)
+
+        util.assertAllEntitiesAreSameType('vehicle', entities)
+
+        var vehicle = util.findEntity('vehicle', entities, '404')
 
         // id
-        assert.deepPropertyVal(vehicle, 'vehicle.id', '1234')
+        assert.deepPropertyVal(vehicle, 'vehicle.id', '404')
 
         // position
-        assert.deepPropertyVal(vehicle, 'position.latitude', 35.59288)
-        assert.deepPropertyVal(vehicle, 'position.longitude', -82.55589)
-        assert.deepPropertyVal(vehicle, 'position.bearing', 219)
+        assert.deepPropertyVal(vehicle, 'position.latitude', 47.599205)
+        assert.deepPropertyVal(vehicle, 'position.longitude', -122.325349)
+        assert.deepPropertyVal(vehicle, 'position.bearing', 88)
         assert.deepProperty(vehicle, 'position.speed')
-        assert.approximately(vehicle.position.speed, 7.5, 0.00001)
+        assert.approximately(vehicle.position.speed, 7.777777777, 0.00001)
 
         // timestamp
-        assert.isBelow(util.getUInt64(vehicle.timestamp), moment().subtract(20, 'seconds').unix())
+        assert.isBelow(util.getUInt64(vehicle.timestamp), moment().subtract(8, 'seconds').unix())
 
       } catch(e) {
         return done(e)

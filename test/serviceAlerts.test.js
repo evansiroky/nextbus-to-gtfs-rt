@@ -28,8 +28,11 @@ describe('service alerts', function() {
 
         assert.isNotOk(err)
 
-        var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 1),
-          alert = util.getEntityOfSpecificType('alert', entities, 0)
+        var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 1)
+
+        util.assertAllEntitiesAreSameType('alert', entities)
+
+        var alert = util.findEntity('alert', entities, '1234')
 
         // alert active period
         assert.isArray(alert.active_period)
@@ -47,7 +50,7 @@ describe('service alerts', function() {
         assert.equal(translations.length, 1)
 
         var translation = translations[0]
-        assert.propertyVal(translation, 'text', 'Stop closed due to construction.')
+        assert.propertyVal(translation, 'text', 'Construction activities nearby may cause intermitent closures.')
         assert.propertyVal(translation, 'language', 'en')
 
         // informed entities
@@ -57,13 +60,13 @@ describe('service alerts', function() {
         // route
         var routeEntity = alert.informed_entity[0]
         assert.isObject(routeEntity)
-        assert.propertyVal(routeEntity, 'route_id', '1234')
+        assert.propertyVal(routeEntity, 'route_id', 'FHS')
 
         // route
         var routeStopEntity = alert.informed_entity[1]
         assert.isObject(routeStopEntity)
-        assert.propertyVal(routeStopEntity, 'stop_id', '123456')
-        assert.propertyVal(routeStopEntity, 'route_id', '1234')
+        assert.propertyVal(routeStopEntity, 'stop_id', '1672')
+        assert.propertyVal(routeStopEntity, 'route_id', 'FHS')
 
       } catch(e) {
         return done(e)

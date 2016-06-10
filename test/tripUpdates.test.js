@@ -23,8 +23,6 @@ describe('trip updates', function() {
   describe('no cache', function() {
   
     it('should dl nextbus predictions and return trip updates protobuf', function(done) {
-
-      this.timeout(60000)
       
       var nockScope = nock(NOCK_HOST)
         .get(BASE_URL_PATH + '?a=seattle-sc&command=routeList')
@@ -48,10 +46,36 @@ describe('trip updates', function() {
         
           assert.isNotOk(err)
 
-          //console.log(feedMessage)
+          var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 26)
 
-          var entities = util.assertIsFeedMessageWithExactEntityLength(feedMessage, 2),
-            tripUpdate = util.getEntityOfSpecificType('trip_update', entities, 0)
+          util.assertAllEntitiesAreSameType('trip_update', entities)
+
+          var tripUpdate = util.findEntity('trip_update', entities, '30982253')
+
+          // trip, route id
+          assert.deepPropertyVal(tripUpdate, 'trip.trip_id', '30982253')
+          assert.deepPropertyVal(tripUpdate, 'trip.route_id', 'FHS')
+
+          // vehicle
+          assert.deepPropertyVal(tripUpdate, 'vehicle.id', '405')
+
+          // stop time update
+          assert.isArray(tripUpdate.stop_time_update)
+
+          var yeslerAndBroadwayStopTime
+
+          for (var i = tripUpdate.stop_time_update.length - 1; i >= 0; i--) {
+            if(tripUpdate.stop_time_update[i].stop_id === '27500') {
+              yeslerAndBroadwayStopTime = tripUpdate.stop_time_update[i]
+              break
+            }
+          }
+
+          assert.isObject(yeslerAndBroadwayStopTime)
+
+          assert.propertyVal(yeslerAndBroadwayStopTime, 'stop_id', '27500')
+          assert.deepProperty(yeslerAndBroadwayStopTime, 'arrival.time')
+          util.assertUInt64(yeslerAndBroadwayStopTime.arrival.time, 1465514048)
 
         } catch(e) {
           return done(e)

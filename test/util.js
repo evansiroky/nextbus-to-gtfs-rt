@@ -8,7 +8,7 @@ util.getTranslator = function() {
 
   return new Translator({ 
     nextbusAgencyId: 'seattle-sc',
-    debug: true
+    debug: false
   })
 }
 
@@ -30,25 +30,48 @@ util.assertIsFeedMessageWithExactEntityLength = function(feedMessage, expectedLe
 
 }
 
-util.getEntityOfSpecificType = function(expectedType, entities, idx) {
+util.assertAllEntitiesAreSameType = function(expectedType, entities) {
 
-  var entity = entities[idx]
-  assert.isObject(entity)
+  var entityTypes = ['trip_update', 'vehicle', 'alert']
 
-  var entityTypes = ['trip_update', 'vehicle', 'alert'],
-    desiredData
+  for (var i = entities.length - 1; i >= 0; i--) {
+    var entity = entities[i]
+  
+    for (var j = entityTypes.length - 1; j >= 0; j--) {
+      if(entityTypes[j] === expectedType) {
+        assert.isObject(entity[entityTypes[j]])
+        desiredData = entity[entityTypes[j]]
+      } else {
+        assert.isNull(entity[entityTypes[j]])
+      }
+    }
 
-  for (var i = entityTypes.length - 1; i >= 0; i--) {
-    if(entityTypes[i] === expectedType) {
-      assert.isObject(entity[entityTypes[i]])
-      desiredData = entity[entityTypes[i]]
-    } else {
-      assert.isNull(entity[entityTypes[i]])
+  }
+
+}
+
+util.findEntity = function(expectedType, entities, id) {
+  for (var i = entities.length - 1; i >= 0; i--) {
+    switch(expectedType) {
+      case 'trip_update':
+        if(entities[i].trip_update && entities[i].trip_update.trip && entities[i].trip_update.trip.trip_id === id) {
+          return entities[i][expectedType]
+        }
+        break
+      case 'vehicle':
+        if(entities[i].vehicle && entities[i].vehicle.vehicle && entities[i].vehicle.vehicle.id === id) {
+          return entities[i][expectedType]
+        }
+        break
+      case 'alert':
+        if(entities[i].alert && entities[i].id === id) {
+          return entities[i][expectedType]
+        }
+        break
     }
   }
-  
-  return desiredData
-
+  var err = new Error('item not found')
+  throw err
 }
 
 util.getUInt64 = function(val) {
