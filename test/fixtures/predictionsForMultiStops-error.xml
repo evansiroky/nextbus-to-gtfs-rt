@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<body copyright="All data copyright Seattle Streetcar 2016.">
+<Error shouldRetry="false">
+  For agency=seattle-sc stop s=1619 is on none of the directions for r=SLU so cannot determine which stop to provide data for.
+</Error>
+</body>
