@@ -1,0 +1,406 @@
+{
+  "definitions": {
+    "TripUpdate.StopTimeEvent": {
+      "title": "StopTimeEvent",
+      "type": "object",
+      "properties": {
+        "delay": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "time": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "uncertainty": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "TripDescriptor": {
+      "title": "TripDescriptor",
+      "type": "object",
+      "properties": {
+        "trip_id": {
+          "type": "string"
+        },
+        "route_id": {
+          "type": "string"
+        },
+        "direction_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "start_time": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string"
+        },
+        "schedule_relationship": {
+          "title": "ScheduleRelationship",
+          "type": "string",
+          "enum": [
+            "SCHEDULED",
+            "ADDED",
+            "UNSCHEDULED",
+            "CANCELED"
+          ]
+        }
+      }
+    },
+    "VehicleDescriptor": {
+      "title": "VehicleDescriptor",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "license_plate": {
+          "type": "string"
+        }
+      }
+    },
+    "TranslatedString": {
+      "title": "TranslatedString",
+      "type": "object",
+      "properties": {
+        "translation": {
+          "type": "array",
+          "items": {
+            "title": "Translation",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    "FeedMessage": {
+      "title": "FeedMessage",
+      "type": "object",
+      "properties": {
+        "header": {
+          "$ref": "#/definitions/FeedHeader"
+        },
+        "entity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FeedEntity"
+          }
+        }
+      },
+      "required": [
+        "header"
+      ]
+    },
+    "FeedHeader": {
+      "title": "FeedHeader",
+      "type": "object",
+      "properties": {
+        "gtfs_realtime_version": {
+          "type": "string"
+        },
+        "incrementality": {
+          "title": "Incrementality",
+          "type": "string",
+          "enum": [
+            "FULL_DATASET",
+            "DIFFERENTIAL"
+          ]
+        },
+        "timestamp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "gtfs_realtime_version"
+      ]
+    },
+    "FeedEntity": {
+      "title": "FeedEntity",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "is_deleted": {
+          "type": "boolean"
+        },
+        "trip_update": {
+          "$ref": "#/definitions/TripUpdate"
+        },
+        "vehicle": {
+          "$ref": "#/definitions/VehiclePosition"
+        },
+        "alert": {
+          "$ref": "#/definitions/Alert"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "TripUpdate": {
+      "title": "TripUpdate",
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/TripDescriptor"
+        },
+        "vehicle": {
+          "$ref": "#/definitions/VehicleDescriptor"
+        },
+        "stop_time_update": {
+          "type": "array",
+          "items": {
+            "title": "StopTimeUpdate",
+            "type": "object",
+            "properties": {
+              "stop_sequence": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "stop_id": {
+                "type": "string"
+              },
+              "arrival": {
+                "$ref": "#/definitions/TripUpdate.StopTimeEvent"
+              },
+              "departure": {
+                "$ref": "#/definitions/TripUpdate.StopTimeEvent"
+              },
+              "schedule_relationship": {
+                "title": "ScheduleRelationship",
+                "type": "string",
+                "enum": [
+                  "SCHEDULED",
+                  "SKIPPED",
+                  "NO_DATA"
+                ]
+              }
+            }
+          }
+        },
+        "timestamp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "delay": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        }
+      },
+      "required": [
+        "trip"
+      ]
+    },
+    "VehiclePosition": {
+      "title": "VehiclePosition",
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/TripDescriptor"
+        },
+        "vehicle": {
+          "$ref": "#/definitions/VehicleDescriptor"
+        },
+        "position": {
+          "$ref": "#/definitions/Position"
+        },
+        "current_stop_sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "stop_id": {
+          "type": "string"
+        },
+        "current_status": {
+          "title": "VehicleStopStatus",
+          "type": "string",
+          "enum": [
+            "INCOMING_AT",
+            "STOPPED_AT",
+            "IN_TRANSIT_TO"
+          ]
+        },
+        "timestamp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "congestion_level": {
+          "title": "CongestionLevel",
+          "type": "string",
+          "enum": [
+            "UNKNOWN_CONGESTION_LEVEL",
+            "RUNNING_SMOOTHLY",
+            "STOP_AND_GO",
+            "CONGESTION",
+            "SEVERE_CONGESTION"
+          ]
+        },
+        "occupancy_status": {
+          "title": "OccupancyStatus",
+          "type": "string",
+          "enum": [
+            "EMPTY",
+            "MANY_SEATS_AVAILABLE",
+            "FEW_SEATS_AVAILABLE",
+            "STANDING_ROOM_ONLY",
+            "CRUSHED_STANDING_ROOM_ONLY",
+            "FULL",
+            "NOT_ACCEPTING_PASSENGERS"
+          ]
+        }
+      }
+    },
+    "Alert": {
+      "title": "Alert",
+      "type": "object",
+      "properties": {
+        "active_period": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TimeRange"
+          }
+        },
+        "informed_entity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EntitySelector"
+          }
+        },
+        "cause": {
+          "title": "Cause",
+          "type": "string",
+          "enum": [
+            "UNKNOWN_CAUSE",
+            "OTHER_CAUSE",
+            "TECHNICAL_PROBLEM",
+            "STRIKE",
+            "DEMONSTRATION",
+            "ACCIDENT",
+            "HOLIDAY",
+            "WEATHER",
+            "MAINTENANCE",
+            "CONSTRUCTION",
+            "POLICE_ACTIVITY",
+            "MEDICAL_EMERGENCY"
+          ]
+        },
+        "effect": {
+          "title": "Effect",
+          "type": "string",
+          "enum": [
+            "NO_SERVICE",
+            "REDUCED_SERVICE",
+            "SIGNIFICANT_DELAYS",
+            "DETOUR",
+            "ADDITIONAL_SERVICE",
+            "MODIFIED_SERVICE",
+            "OTHER_EFFECT",
+            "UNKNOWN_EFFECT",
+            "STOP_MOVED"
+          ]
+        },
+        "url": {
+          "$ref": "#/definitions/TranslatedString"
+        },
+        "header_text": {
+          "$ref": "#/definitions/TranslatedString"
+        },
+        "description_text": {
+          "$ref": "#/definitions/TranslatedString"
+        }
+      }
+    },
+    "TimeRange": {
+      "title": "TimeRange",
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "Position": {
+      "title": "Position",
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "bearing": {
+          "type": "number"
+        },
+        "odometer": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ]
+    },
+    "EntitySelector": {
+      "title": "EntitySelector",
+      "type": "object",
+      "properties": {
+        "agency_id": {
+          "type": "string"
+        },
+        "route_id": {
+          "type": "string"
+        },
+        "route_type": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "trip": {
+          "$ref": "#/definitions/TripDescriptor"
+        },
+        "stop_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

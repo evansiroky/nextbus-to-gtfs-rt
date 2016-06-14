@@ -21,9 +21,9 @@
   "dependencies": {
     "async": "^2.0.0-rc.5",
     "gtfs-realtime-bindings": "0.0.4",
-    "minimist": "^1.2.0",
     "moment": "^2.10.6",
-    "transit-api": "evansiroky/transit-api"
+    "transit-api": "evansiroky/transit-api",
+    "yargs": "^4.7.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
