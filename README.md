@@ -1,5 +1,7 @@
 # nextbus-to-gtfs-rt
 
+[![npm version](https://badge.fury.io/js/nextbus-to-gtfs-rt.svg)](https://badge.fury.io/js/nextbus-to-gtfs-rt) [![Build Status](https://travis-ci.org/evansiroky/nextbus-to-gtfs-rt.svg?branch=master)](https://travis-ci.org/evansiroky/nextbus-to-gtfs-rt) [![Dependency Status](https://david-dm.org/evansiroky/nextbus-to-gtfs-rt.svg)](https://david-dm.org/evansiroky/nextbus-to-gtfs-rt) [![Test Coverage](https://codeclimate.com/github/evansiroky/nextbus-to-gtfs-rt/badges/coverage.svg)](https://codeclimate.com/github/evansiroky/nextbus-to-gtfs-rt/coverage)
+
 A NodeJS translator of the NextBus API to GTFS-RT.
 
 ## CLI Usage
