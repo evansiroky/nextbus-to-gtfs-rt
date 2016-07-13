@@ -30,7 +30,7 @@
     "chai": "^3.5.0",
     "chai-json-schema": "chaijs/chai-json-schema",
     "codeclimate-test-reporter": "^0.3.2",
-    "cross-env": "^1.0.8",
+    "cross-env": "^2.0.0",
     "cz-conventional-changelog": "^1.1.6",
     "fs-extra": "^0.30.0",
     "istanbul": "^0.4.3",
