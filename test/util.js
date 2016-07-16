@@ -2,14 +2,13 @@ var assert = require('chai').assert
 
 var util = {}
 
-util.getTranslator = function() {
+util.getTranslator = function(cfg) {
 
   var Translator = require('../lib/index.js')
 
-  return new Translator({ 
-    nextbusAgencyId: 'seattle-sc',
-    debug: false
-  })
+  cfg = cfg || { nextbusAgencyId: 'seattle-sc', debug: false }
+
+  return new Translator(cfg)
 }
 
 util.assertIsFeedMessageWithExactEntityLength = function(feedMessage, expectedLength) {

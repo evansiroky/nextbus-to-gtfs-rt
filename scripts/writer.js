@@ -2,13 +2,19 @@ var fs = require('fs')
 
 var async = require('async')
 
-var Translator = require('../lib/index.js')
+var Translator = require('../lib/index.js'),
+  util = require('./writerUtil.js')
 
 
-var writer = function(nextbusAgencyId, outputDir, callback) {
+var writer = function(cfg, callback) {
+
+  var nextbusAgencyId = cfg.a, 
+    outputDir = cfg.d
+
 
   var translator = new Translator({ 
-    nextbusAgencyId: nextbusAgencyId
+    nextbusAgencyId: nextbusAgencyId,
+    cacheExpiration: cfg.e
   })
 
   var makeFeedWriter = function(feedType) {
@@ -69,26 +75,12 @@ if (invocation === 'direct') {
   var argv = require('yargs')
     .usage('Usage: $0 [options]')
     .example('$0 -a sf-muni -d output', 'Download the current state of the sf-muni NextBus Feed, Translate it to gtfs-rt and save to files')
-    .options({
-      a: {
-        alias: 'agency-id',
-        demand: true,
-        describe: 'The NextBus Agency Id',
-        type: 'string'
-      },
-      d: {
-        alias: 'output-directory',
-        demand: false,
-        default: './',
-        describe: 'the directory to save files to',
-        type: 'string'
-      }
-    })
+    .options(util.baseCmdOptions)
     .help('h')
     .alias('h', 'help')
     .argv;
 
-  writer(argv.a, argv.d)
+  writer(argv)
 } else {
   module.exports = writer
 }
