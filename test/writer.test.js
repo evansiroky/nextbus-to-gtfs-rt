@@ -50,7 +50,7 @@ describe('writer', function() {
       .get(BASE_URL_PATH + '?r=&t=0&a=seattle-sc&command=vehicleLocations')
       .replyWithFile(200, FIXTURES_FOLDER + '/vehicleLocations.xml')
 
-    writer('seattle-sc', './outputs', function(err) {
+    writer({ a: 'seattle-sc', d: './outputs' }, function(err) {
 
       try {
 

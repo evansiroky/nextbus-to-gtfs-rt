@@ -153,10 +153,10 @@ describe('trip updates', function() {
 
     })
 
-    describe('natural refresh', function() {
+    describe('cache refresh', function() {
 
       beforeEach(function(done) {
-        var threeHoursAgo = ((new Date()).getTime() - 1080000) / 1000
+        var threeHoursAgo = ((new Date()).getTime() - 10800000) / 1000
         fs.utimes('./cache/routeStopPairs.json', threeHoursAgo, threeHoursAgo, done)
       })
 
@@ -177,7 +177,12 @@ describe('trip updates', function() {
             'stops=FHS%7C1551_ar&a=seattle-sc&command=predictionsForMultiStops')
           .replyWithFile(200, FIXTURES_FOLDER + '/predictionsForMultiStops-ok.xml')
 
-        testTranslator.processTripUpdates(makeTripUpdateTestSuite(nockScope, done))
+        var cacheTestTranslator = util.getTranslator({ 
+          nextbusAgencyId: 'seattle-sc',
+          cacheExpiration: 2
+        })
+
+        cacheTestTranslator.processTripUpdates(makeTripUpdateTestSuite(nockScope, done))
 
       })
 
