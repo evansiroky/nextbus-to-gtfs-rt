@@ -21,10 +21,12 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.0-rc.5",
+    "debug": "^2.2.0",
     "gtfs-realtime-bindings": "0.0.4",
-    "moment": "^2.10.6",
-    "transit-api": "evansiroky/transit-api",
-    "yargs": "^4.7.1"
+    "moment": "^2.14.1",
+    "request": "^2.74.0",
+    "xml2js": "^0.4.17",
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

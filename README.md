@@ -74,8 +74,6 @@ Takes in an object with the following attributes:
 
 *cacheExpiration*  (int, optional, default=24)  Number of hours between cache refreshes
 
-*debug*  (bool, optional, default=false) Whether to log calls to NextBus api
-
 ### Translator methods
 
 Each method takes in a callback funtion argument with the signature: `funtion(err, feedMessage)` where `err` is any error that occurred and `feedMessage` is a protobuf object of the gtfs-rt feed for the requested type.
