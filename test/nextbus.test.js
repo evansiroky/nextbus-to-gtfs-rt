@@ -8,7 +8,7 @@ var util = require('./util.js')
 
 var BASE_URL_PATH = '/service/publicXMLFeed',
   FIXTURES_FOLDER = './test/fixtures',
-  nextbusClient = new Nextbus('seattle-sc', 500),
+  nextbusClient = new Nextbus('seattle-sc', 200),
   NOCK_HOST = 'http://webservices.nextbus.com'
 
 
@@ -56,12 +56,30 @@ describe('nextbus', function() {
 
     })
 
+  })
+
+  describe('retries after errors', function() {
+
+    this.timeout(15000)
+    this.slow(10000)
+
     it('should return an error after server connection timeout', function(done) {
 
       var nockScope = nock(NOCK_HOST)
-        .get(BASE_URL_PATH)
+
+      nockScope.get(BASE_URL_PATH)
         .query(util.makeQueryParams('messages', { t: 0 }))
-        .delayConnection(4000)
+        .delayConnection(60000)
+        .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .delayConnection(60000)
+        .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .delayConnection(60000)
         .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
 
       nextbusClient.messages(function(err) {
@@ -69,7 +87,7 @@ describe('nextbus', function() {
         nockScope.done()
 
         assert.isOk(err)
-        assert.equal(err.code, 'ETIMEDOUT')
+        assert.equal(err.message, 'Maximum request retries exceeded')
 
         done()
 
@@ -80,9 +98,20 @@ describe('nextbus', function() {
     it('should return an error after server connection timeout', function(done) {
 
       var nockScope = nock(NOCK_HOST)
-        .get(BASE_URL_PATH)
+
+      nockScope.get(BASE_URL_PATH)
         .query(util.makeQueryParams('messages', { t: 0 }))
-        .socketDelay(4000)
+        .socketDelay(60000)
+        .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .socketDelay(60000)
+        .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .socketDelay(60000)
         .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
 
       nextbusClient.messages(function(err) {
@@ -90,7 +119,7 @@ describe('nextbus', function() {
         nockScope.done()
 
         assert.isOk(err)
-        assert.equal(err.code, 'ESOCKETTIMEDOUT')
+        assert.equal(err.message, 'Maximum request retries exceeded')
 
         done()
 
@@ -101,7 +130,16 @@ describe('nextbus', function() {
     it('should return an error after receiving non-200 http status response', function(done) {
 
       var nockScope = nock(NOCK_HOST)
-        .get(BASE_URL_PATH)
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .reply(500)
+
+      nockScope.get(BASE_URL_PATH)
+        .query(util.makeQueryParams('messages', { t: 0 }))
+        .reply(500)
+
+      nockScope.get(BASE_URL_PATH)
         .query(util.makeQueryParams('messages', { t: 0 }))
         .reply(500)
 
@@ -110,7 +148,7 @@ describe('nextbus', function() {
         nockScope.done()
 
         assert.isOk(err)
-        assert.equal(err.message, 'Received non-200 response from server: 500')
+        assert.equal(err.message, 'Maximum request retries exceeded')
 
         done()
 
