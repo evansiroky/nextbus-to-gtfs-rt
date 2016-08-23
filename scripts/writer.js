@@ -1,6 +1,7 @@
 var fs = require('fs')
 
-var async = require('async')
+var async = require('async'),
+  debug = require('debug')('ntgr.writer')
 
 var Translator = require('../lib/index.js'),
   util = require('./writerUtil.js')
@@ -65,7 +66,12 @@ var writer = function(cfg, callback) {
       makeFeedWriter('trips'),
       makeFeedWriter('vehicles')
     ],
-    callback)
+    function(err) {
+      if(err) {
+        debug(err)
+      }
+      callback(err)
+    })
 
 }
 

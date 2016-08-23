@@ -6,8 +6,8 @@ var util = require('./util.js')
 
 
 var BASE_URL_PATH = '/service/publicXMLFeed',
-  NOCK_HOST = 'http://webservices.nextbus.com',
-  FIXTURES_FOLDER = './test/fixtures'
+  FIXTURES_FOLDER = './test/fixtures',
+  NOCK_HOST = 'http://webservices.nextbus.com'
 
 
 var testTranslator = util.getTranslator()
@@ -17,7 +17,8 @@ describe('service alerts', function() {
   it('should dl nextbus messages and return service alert protobuf', function(done) {
     
     var nockScope = nock(NOCK_HOST)
-      .get(BASE_URL_PATH + '?t=0&a=seattle-sc&command=messages')
+      .get(BASE_URL_PATH)
+      .query(util.makeQueryParams('messages', { t: 0 }))
       .replyWithFile(200, FIXTURES_FOLDER + '/messages.xml')
 
     testTranslator.processServiceAlerts(function(err, feedMessage) {

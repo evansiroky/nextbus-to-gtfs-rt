@@ -1,3 +1,5 @@
+var debug = require('debug')('ntgr.continuousWriter')
+
 var writer = require('./writer.js'),
   util = require('./writerUtil.js')
 
@@ -23,7 +25,7 @@ var argv = require('yargs')
 
 var runAgain = function(err) {
   if(err) {
-    console.log(err)
+    debug(err)
   }
   setTimeout(function(){
     writer(argv, runAgain)
